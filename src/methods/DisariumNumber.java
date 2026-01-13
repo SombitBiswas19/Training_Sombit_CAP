@@ -13,7 +13,7 @@ public class DisariumNumber {
 		checkdisariumnumber(num);
 	}
 
-	private static void checkdisariumnumber(int num) {
+	public static void checkdisariumnumber(int num) {
 		int count=countdigit(num),n=num;
 		long sum=0;
 		while(num>0)

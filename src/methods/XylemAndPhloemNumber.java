@@ -9,7 +9,7 @@ public class XylemAndPhloemNumber {
 		equal to the sum of its mean digits (all digits in between).
 		
 		A number is a phloem number if the sum of its extreme digits is not equal to the
-		 sum of its mean digits. */
+		sum of its mean digits. */
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Give a number for checking xylem or phloem number: ");
