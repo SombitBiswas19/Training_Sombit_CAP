@@ -47,8 +47,8 @@ public class Pattern1 {
 
 	public static void main(String[] args) {
 		p1(3);
-		p2(3);
 		p3(3);
+		p2(3);
 		p4(3);
 	}
 

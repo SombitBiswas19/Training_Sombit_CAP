@@ -1,0 +1,23 @@
+package inheritance;
+
+public class Fruit {
+	String color;
+	String name;
+	
+	Fruit(){
+		
+	}
+	
+	Fruit(String color,String name)
+	{
+		this.color=color;
+		this.name=name;
+	}
+	
+	public static void main(String[] args) {
+		Fruit f=new Fruit("Red","Apple");
+		System.out.println(f.color);
+		System.out.println(f.name);
+	}
+
+}

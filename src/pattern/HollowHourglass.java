@@ -15,7 +15,6 @@ public class HollowHourglass {
 	            }
 	            System.out.println();
 	        }
-
 	        // Lower half Hollow Pyramid
 	        for (int i = n - 2; i >= 0; i--) {
 	            // Print leading spaces
