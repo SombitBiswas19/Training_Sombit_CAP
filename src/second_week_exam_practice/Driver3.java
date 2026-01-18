@@ -4,6 +4,7 @@ public class Driver3 {
 
 	public static void main(String[] args) {
 		App2 app=new App2();
+		//App2.operation();
 		app.operation();
 		
 		WhatsApp2 wp=new WhatsApp2();
@@ -14,6 +15,9 @@ public class Driver3 {
 		//The child class method hides the parent class method.
 		App2 app1=new WhatsApp2();
 		app1.operation();
+		
+		wp=(WhatsApp2)app1;
+		wp.operation();
 
 	}
 
