@@ -2,20 +2,25 @@ package array_basic;
 
 import java.util.Scanner;
 
-public class frequencyOfElements {
-
+public class Unique_Elements {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the integer array size:");
-		int n=sc.nextInt();
-		int[] a = new int[n];
+		System.out.println("Enter the 1st Sorted integer array size:");
+		int[] a = new int[sc.nextInt()];
+		System.out.println(a.length);
 		System.out.println("-----------------");
 		for (int i = 0; i < a.length; i++) {
 			System.out.println("Enter the " + i + " th element of Array");
 			a[i] = sc.nextInt();
 		}
+
+		unique_elements(a);
+
+	}
+
+	private static void unique_elements(int[] a) {
+		int n=a.length;
 		int[] freq=new int[n];
-		
 		for(int i=0;i<n;i++)
 		{
 			int count=1;
@@ -32,11 +37,10 @@ public class frequencyOfElements {
 		}
 		
 		for (int i = 0; i < freq.length; i++) {
-            if (freq[i] != -1) {
+            if (freq[i] != -1 && freq[i]==1) {
                 System.out.println("   " + a[i] + " -> " + freq[i]);
             }
         }
-
 	}
 
 }

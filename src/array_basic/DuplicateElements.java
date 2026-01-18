@@ -15,20 +15,33 @@ public class DuplicateElements {
 			a[i] = sc.nextInt();
 		}
 
-		int count = duplicate_elements(a);
-		System.out.println(count);
+		duplicate_elements(a);
 
 	}
 
-	private static int duplicate_elements(int[] a) {
-		int n = a.length, count = 0;
-
-		for (int i = 0; i < n - 1; i++) {
-			if (a[i] == a[i + 1]) {
-				count++;
+	private static void duplicate_elements(int[] a) {
+		int n=a.length;
+		int[] freq=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			int count=1;
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]==a[j])
+				{
+					count++;
+					freq[j]=-1;
+				}
 			}
+			if(freq[i]!=-1)
+				freq[i]=count;
 		}
-		return count;
+		
+		for (int i = 0; i < freq.length; i++) {
+            if (freq[i] != -1 && freq[i]>=2) {
+                System.out.println("   " + a[i] + " -> " + freq[i]);
+            }
+        }
 	}
 
 }
