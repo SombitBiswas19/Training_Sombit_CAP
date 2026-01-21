@@ -41,7 +41,7 @@ public class Employee {
 		if(o==null || o.getClass()!=this.getClass())
 			return false;
 		Employee e = (Employee) o; 
-		return this.id==e.id && this.name==e.name;
+		return this.id==e.id && this.name.equals(e.name);
 	}
 	
 	public static void main(String[] args) {
