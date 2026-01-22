@@ -20,6 +20,7 @@ public class Anagrams {
 			System.out.println("Not Anagrams");
 		}
 		
+		
 
 	}
 
