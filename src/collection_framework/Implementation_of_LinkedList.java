@@ -28,6 +28,7 @@ public class Implementation_of_LinkedList {
 		System.out.println(l1.offer(123));
 		System.out.println(l1.offerFirst(123234));
 		System.out.println(l1.offerLast(12344444));
+		// Retrieves and removes the head (first element) of this list.
 		System.out.println(l1.peek());
 		System.out.println(l1.peekFirst());
 		System.out.println(l1.peekLast());

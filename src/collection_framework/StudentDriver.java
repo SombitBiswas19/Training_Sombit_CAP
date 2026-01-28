@@ -1,6 +1,7 @@
 package collection_framework;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class StudentDriver {
 	public static void main(String[] args) {
@@ -33,6 +34,13 @@ public class StudentDriver {
 			System.out.println("No Passed Student Available.");
 		Student.display_students_highest_marks(student);
 		Student.search_by_name(student, "Somba");
+		
+		Collections.sort(student, new SortStudentById());
+		//Lambda Expression
+		Collections.sort(student,(s1,s2)->s1.id-s2.id);
+		System.out.println(student);
+		
+		sc.close();
 	}
 	
 	
