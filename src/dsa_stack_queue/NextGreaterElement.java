@@ -1,0 +1,42 @@
+package dsa_stack_queue;
+
+import java.util.HashMap;
+import java.util.Stack;
+
+public class NextGreaterElement {
+	public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        int n1=nums2.length;
+        int n2=nums1.length;
+        int[] nge=new int[n2];
+        HashMap<Integer,Integer> map=new HashMap<>();
+        Stack<Integer> stack=new Stack<>();
+        for(int i=n1-1;i>=0;i--)
+        {
+            while(!stack.isEmpty() && stack.peek()<=nums2[i])
+            {
+                stack.pop();
+            }
+            if(stack.isEmpty())
+               map.put(nums2[i],-1);
+            else
+                map.put(nums2[i],stack.peek());
+            stack.push(nums2[i]);
+        }
+        for(int i=0;i<n2;i++)
+        {
+            if(map.containsKey(nums1[i]))
+                nge[i]=map.get(nums1[i]);
+        }
+        return nge;
+    }
+	public static void main(String[] args) {
+		int[] nums1 = {4,1,2};
+		int[] nums2 = {1,3,4,2};
+		int[] nums3=nextGreaterElement(nums1,nums2);
+		for(int i=0;i<nums3.length;i++)
+		{
+			System.out.println(nums1[i]+" : "+nums3[i]);
+		}
+	}
+
+}
